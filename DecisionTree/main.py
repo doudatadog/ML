@@ -14,7 +14,6 @@ class TreeGrower:
     def __init__(self,task,cost):
         self.task = task
         self.cost = cost
-        return self
     def fit(self,X,y,**kwargs):
         *self.model,self.infos = grow_tree(X,y,task=self.task,cost=self.cost,**kwargs)
         return self
